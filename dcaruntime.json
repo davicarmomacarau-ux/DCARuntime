@@ -1,0 +1,7 @@
+{
+    "name": "DCARuntime",
+    "version": "0.7.0",
+    "plugins": true,
+    "database": true,
+    "security": true
+}

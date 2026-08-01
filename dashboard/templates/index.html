@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+DCARuntime Dashboard
+</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>
+DCARuntime
+</h1>
+
+
+<h2>
+Sistema de Runtime
+</h2>
+
+
+
+<div class="card">
+
+<h3>
+Plugins
+</h3>
+
+
+{% for plugin in data.plugins %}
+
+<p>
+
+🟢 {{plugin.name}}
+
+-
+{{plugin.version}}
+
+</p>
+
+{% endfor %}
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Processos
+</h3>
+
+
+{% for process in data.processes %}
+
+<p>
+
+{{process.pid}}
+
+-
+
+{{process.name}}
+
+</p>
+
+
+{% endfor %}
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Serviços
+</h3>
+
+
+{% for service in data.services %}
+
+<p>
+
+{{service.name}}
+
+-
+
+{{service.status}}
+
+</p>
+
+
+{% endfor %}
+
+
+</div>
+
+
+
+</body>
+
+</html>
